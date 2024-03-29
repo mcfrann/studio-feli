@@ -1,8 +1,14 @@
 import styles from "./style.module.scss";
-import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Page = () => {
-  return <section className={styles.page}>PAGE</section>;
+  return (
+    <section className={styles.page}>
+      <Header />
+      <Footer />
+    </section>
+  );
 };
 
 export default Page;
