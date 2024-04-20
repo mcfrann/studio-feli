@@ -63,6 +63,32 @@ span {
   @include body-font();
 }
 
+.button {
+  background-color: $red;
+  border-radius: 30px;
+  line-height: 1;
+  padding: 8px 20px;
+  width: max-content;
+  a {
+    @include flexbox();
+    @include justify-content(center);
+    color: $white;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.15s linear;
+    width: 100%;
+    span {
+      font-size: 12pt !important;
+    }
+  }
+  &:hover {
+    a {
+      color: $black;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 }

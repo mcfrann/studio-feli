@@ -113,10 +113,10 @@ $full: 100%;
   font-family: $body-font-family;
   font-weight: $body-font-weight;
   font-style: $body-font-style;
-  font-size: 18pt;
-  font-size: calc(10pt + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
+  font-size: 26pt;
+  font-size: calc(18pt + (26 - 18) * ((100vw - 300px) / (1600 - 300)));
   letter-spacing: 0.05rem;
-  line-height: 1;
+  line-height: 1.5;
   @include mobile {
     font-size: calc(12pt + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
   }
@@ -134,9 +134,10 @@ $full: 100%;
 //  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 
 @mixin h1() {
-  font-size: 200pt;
-  font-size: calc(120pt + (200 - 120) * ((100vw - 300px) / (1600 - 300)));
-  line-height: 1;
+  font-size: 50pt;
+  font-size: calc(45pt + (50 - 45) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.1;
+  text-transform: uppercase;
   @include small {
     font-size: calc(90pt + (150 - 90) * ((100vw - 300px) / (1600 - 300)));
   }
