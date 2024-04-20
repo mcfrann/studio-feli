@@ -66,9 +66,12 @@ span {
 .button {
   background-color: $red;
   border-radius: 30px;
+  line-height: 1;
   padding: 8px 20px;
   width: max-content;
   a {
+    @include flexbox();
+    @include justify-content(center);
     color: $white;
     height: 100%;
     text-align: center;
