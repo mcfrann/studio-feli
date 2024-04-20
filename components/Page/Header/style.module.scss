@@ -26,26 +26,30 @@
       @include vars.flexbox();
       @include vars.align-items(center);
       @include vars.justify-content(right);
-      padding: 0 45px;
       text-align: center;
       width: vars.$two-twelfths;
       @include vars.mobile {
         display: none;
       }
-      a {
-        color: vars.$red;
-        height: 100%;
-        text-align: center !important;
-        transition: color 0.15s linear;
-        width: 100%;
-        span {
-          font-size: 12pt !important;
-          text-align: center !important;
-        }
-      }
-      &:hover {
+      .contactButton {
+        background-color: vars.$red;
+        border-radius: 30px;
+        padding: 8px 20px;
         a {
-          color: vars.$black;
+          color: vars.$white;
+          height: 100%;
+          text-align: center;
+          text-transform: uppercase;
+          transition: color 0.15s linear;
+          width: 100%;
+          span {
+            font-size: 12pt !important;
+          }
+        }
+        &:hover {
+          a {
+            color: vars.$black;
+          }
         }
       }
     }
@@ -78,18 +82,15 @@
         @include vars.align-items(center);
         @include vars.justify-content(center);
         background-color: transparent;
-        margin-right: 15px;
         overflow: hidden;
         transition: background-color 0.15s;
-        &:last-child {
-          margin-right: 0;
-        }
         a {
           color: vars.$red;
           height: 100%;
           padding: 8px 20px;
-          transition: color 0.15s linear;
+          text-transform: uppercase;
           text-align: center;
+          transition: color 0.15s linear;
           width: 100%;
           span {
             font-size: 12pt !important;
