@@ -1,9 +1,9 @@
 import styles from "./logo.module.scss";
 import Link from "next/link";
 
-const Logo = () => {
-  return (
-    <Link href="/" aria-label="link to homepage">
+const Logo = ({ link }) => {
+  const loadLogo = () => {
+    return (
       <svg className={styles.logo} viewBox="0 0 51 32">
         <path
           d="M47.1462 8.64409L46.6976 7.78155C46.0995 6.63317 45.2971 5.66692 44.3501 4.95868L43.9165 4.63238L44.5445 4.14672C45.5189 3.39042 46.3363 2.36093 46.9294 1.13921L47.1487 0.688965L47.4353 1.27074C48.0508 2.51776 48.9031 3.55989 49.9174 4.30861L50.346 4.62479L50.1317 4.77656C49.1398 5.48227 48.2975 6.46623 47.672 7.65002L47.1462 8.64156V8.64409Z"
@@ -26,8 +26,18 @@ const Logo = () => {
           fill="#DF3A3A"
         />
       </svg>
-    </Link>
-  );
+    );
+  };
+
+  if (link) {
+    return (
+      <Link href="/" aria-label="link to homepage">
+        {loadLogo()}
+      </Link>
+    );
+  } else {
+    return loadLogo();
+  }
 };
 
 export default Logo;
