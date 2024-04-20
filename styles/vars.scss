@@ -143,9 +143,10 @@ $full: 100%;
 }
 
 @mixin h2() {
-  font-size: 120pt;
-  font-size: calc(80pt + (120 - 80) * ((100vw - 300px) / (1600 - 300)));
+  font-size: 45pt;
+  font-size: calc(20pt + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
   line-height: 85%;
+  text-transform: uppercase;
   @include small {
     font-size: calc(80pt + (130 - 80) * ((100vw - 300px) / (1600 - 300)));
   }
