@@ -16,6 +16,8 @@ const Footer = () => {
     });
   };
 
+  //test
+
   return (
     <section className={styles.footer}>
       <div className={styles.emailContainer}>
