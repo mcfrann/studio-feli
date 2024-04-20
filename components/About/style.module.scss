@@ -1,0 +1,18 @@
+@use "../../styles/vars";
+
+.aboutSection {
+  @include vars.grid-wrap;
+  padding: 250px vars.$one-twenty-fourth;
+  .headerWrapper {
+    grid-row: 1;
+    grid-column: 1 / 8;
+    margin-bottom: 90px;
+  }
+  .copyButtonContainer {
+    grid-row: 2;
+    grid-column: 5/13;
+    .button {
+      margin-top: 45px;
+    }
+  }
+}
