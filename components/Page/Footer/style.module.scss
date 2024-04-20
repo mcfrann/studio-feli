@@ -50,9 +50,6 @@
             color: vars.$black;
           }
         }
-        @include vars.small {
-          display: none;
-        }
       }
     }
   }
