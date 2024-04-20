@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Logo from "../../SVGs/Logo/logo";
+import Logo from "../SVGs/Logo/logo";
 
 const Hero = () => {
   return (

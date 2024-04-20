@@ -1,1 +1,56 @@
 @use "../../../styles/vars";
+
+.footer {
+  @include vars.flexbox();
+  @include vars.flex-direction(column);
+  @include vars.align-items(center);
+  background-color: vars.$red;
+  color: vars.$white;
+  height: 60vh;
+  .emailContainer {
+    @include vars.flexbox();
+    @include vars.flex-direction(column);
+    @include vars.align-items(center);
+    @include vars.justify-content(center);
+    height: 100%;
+  }
+  .footerBar {
+    @include vars.flexbox();
+    @include vars.justify-content(space-between);
+    width: 100%;
+    padding: 45px 60px;
+    position: absolute;
+    bottom: 0;
+    .footerNav {
+      @include vars.flexbox();
+      @include vars.align-items(center);
+      @include vars.justify-content(center);
+      width: vars.$eight-twelfths;
+      .navButton {
+        @include vars.flexbox();
+        @include vars.align-items(center);
+        @include vars.justify-content(center);
+        background-color: transparent;
+        overflow: hidden;
+        transition: background-color 0.15s;
+        a {
+          color: vars.$white;
+          height: 100%;
+          padding: 8px 20px;
+          text-transform: uppercase;
+          text-align: center;
+          transition: color 0.15s linear;
+          width: 100%;
+          span {
+            font-size: 12pt !important;
+          }
+        }
+        &:hover {
+          a {
+            color: vars.$black;
+          }
+        }
+      }
+    }
+  }
+}
