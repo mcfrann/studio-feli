@@ -1,5 +1,6 @@
 import styles from "./style.module.scss";
 import Link from "next/link";
+import Sparkle from "../SVGs/Icons/sparkle";
 
 const About = () => {
   return (
@@ -18,6 +19,9 @@ const About = () => {
             <span>Contact Us</span>
           </Link>
         </div>
+      </div>
+      <div className={styles.iconContainer}>
+        <Sparkle />
       </div>
     </section>
   );
