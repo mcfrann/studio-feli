@@ -4,7 +4,9 @@ import Logo from "../../SVGs/Logo/logo";
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <Logo />
+      <div className={styles.logoContainer}>
+        <Logo />
+      </div>
     </section>
   );
 };
