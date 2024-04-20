@@ -134,9 +134,10 @@ $full: 100%;
 //  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 
 @mixin h1() {
-  font-size: 200pt;
-  font-size: calc(120pt + (200 - 120) * ((100vw - 300px) / (1600 - 300)));
-  line-height: 1;
+  font-size: 50pt;
+  font-size: calc(45pt + (50 - 45) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.1;
+  text-transform: uppercase;
   @include small {
     font-size: calc(90pt + (150 - 90) * ((100vw - 300px) / (1600 - 300)));
   }
