@@ -1,1 +1,12 @@
 @use "../../../styles/vars";
+
+.hero {
+  .logoContainer {
+    padding: 13vh vars.$four-twelfths;
+    width: vars.$full;
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
