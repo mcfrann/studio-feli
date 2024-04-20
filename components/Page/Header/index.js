@@ -4,14 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import Logo from "../../SVGs/Logo/logo";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { navItems } from "../../../utils/navItems";
 
 const Header = ({ homepage, firstLoad, setFirstLoad }) => {
   const [showSmallNav, setShowSmallNav] = useState(false);
-  const navItems = [
-    { nav: "Projects", href: "/projects" },
-    { nav: "Our Process", href: "/process" },
-    { nav: "About", href: "/about" },
-  ];
 
   const contactRef = useRef();
   const headerRef = useRef();
