@@ -1,7 +1,7 @@
 import styles from "./style.module.scss";
 import Header from "./Header";
 import Footer from "./Footer";
-import Hero from "./Hero";
+import Hero from "../Hero";
 
 const Page = () => {
   return (
