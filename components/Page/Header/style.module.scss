@@ -31,27 +31,6 @@
       @include vars.mobile {
         display: none;
       }
-      .contactButton {
-        background-color: vars.$red;
-        border-radius: 30px;
-        padding: 8px 20px;
-        a {
-          color: vars.$white;
-          height: 100%;
-          text-align: center;
-          text-transform: uppercase;
-          transition: color 0.15s linear;
-          width: 100%;
-          span {
-            font-size: 12pt !important;
-          }
-        }
-        &:hover {
-          a {
-            color: vars.$black;
-          }
-        }
-      }
     }
     .logoContainer {
       width: vars.$two-twelfths;
