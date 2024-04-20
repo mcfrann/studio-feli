@@ -6,9 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.72.0",
+    "scss": "^0.2.4"
   },
   "engines": {
     "node": ">=18"

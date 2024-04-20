@@ -1,0 +1,82 @@
+@import url("https://use.typekit.net/qhd4qnk.css");
+@import "./vars";
+
+html,
+body {
+  @include body-font();
+  background-color: $white;
+  color: $red;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: clip;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  drop-shadow: none !important ;
+  &:focus-visible {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h5 {
+  @include header-font();
+  margin: 0;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+h4 {
+  @include h4();
+  @include subhead-font();
+  margin: 0;
+}
+
+h5 {
+  @include h5();
+}
+
+p,
+span {
+  @include body-font();
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  background-color: $white;
+  position: relative;
+  z-index: 100;
+}
+
+.pop-up {
+  display: inline-block;
+  background-color: $pink;
+  border-radius: 50px;
+  font-size: 10pt;
+  padding: 10px;
+}
