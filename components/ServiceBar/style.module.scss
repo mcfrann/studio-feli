@@ -5,38 +5,36 @@
   @include vars.justify-content(center);
   @include vars.align-items(center);
   border: 1px solid vars.$red;
-  width: max-content;
-  .serviceWrapper {
+  height: 20vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .scrollSection {
     @include vars.flexbox();
-    @include vars.flex-flow(row);
-    @include vars.align-items(center);
-    @include vars.justify-content(center);
-    padding: 20px 0;
-    overflow: hidden;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: max-content;
+    transform: translateX(0);
+    .serviceWrapper {
+      @include vars.flexbox();
+      @include vars.align-items(center);
+      @include vars.justify-content(center);
+      padding: 20px 0;
+      overflow: hidden;
 
-    h2 {
-      color: vars.$red;
-      white-space: nowrap;
-      margin: 0 15px;
-    }
-    .icon {
-      height: 250px;
-      width: 250px;
-      padding: 0 15px;
-      @include vars.x-small {
-        height: 130px;
+      h2 {
+        color: vars.$red;
+        white-space: nowrap;
+        margin: 0 15px;
       }
-      span,
-      img {
-        height: 100% !important;
-        object-fit: contain !important;
-        width: 100% !important;
-      }
-      > div {
-        height: 100%;
-        svg {
-          height: 100px;
-        }
+      .icon {
+        @include vars.flexbox();
+        @include vars.align-items(center);
+        @include vars.justify-content(center);
+        height: 60px;
+        width: 60px;
+        margin: 0 30px;
       }
     }
   }
