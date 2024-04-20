@@ -64,7 +64,7 @@ const Header = ({ homepage, firstLoad, setFirstLoad }) => {
     >
       <div className={styles.headerWrapper}>
         <div className={styles.logoContainer}>
-          <Logo />
+          <Logo link={true} />
         </div>
         <div className={styles.navContainer}>
           {renderNavItems(true)}
