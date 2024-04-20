@@ -1,0 +1,41 @@
+@use "../../styles/vars";
+
+.serviceBar {
+  @include vars.flexbox();
+  @include vars.justify-content(center);
+  @include vars.align-items(center);
+  border: 1px solid vars.$red;
+  height: 20vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .scrollSection {
+    @include vars.flexbox();
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: max-content;
+    transform: translateX(0);
+    .serviceWrapper {
+      @include vars.flexbox();
+      @include vars.align-items(center);
+      @include vars.justify-content(center);
+      padding: 20px 0;
+      overflow: hidden;
+
+      h2 {
+        color: vars.$red;
+        white-space: nowrap;
+        margin: 0 15px;
+      }
+      .icon {
+        @include vars.flexbox();
+        @include vars.align-items(center);
+        @include vars.justify-content(center);
+        height: 60px;
+        width: 60px;
+        margin: 0 30px;
+      }
+    }
+  }
+}
