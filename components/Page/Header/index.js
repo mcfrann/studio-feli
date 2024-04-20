@@ -75,7 +75,7 @@ const Header = ({ homepage, firstLoad, setFirstLoad }) => {
           </div>
         </div>
         <div className={styles.contactContainer} ref={contactRef}>
-          <div className={styles.contactButton} ref={addToRefs}>
+          <div className={`${styles.contactButton} button`} ref={addToRefs}>
             <Link href={"/contact"}>
               <span>Contact Us</span>
             </Link>
