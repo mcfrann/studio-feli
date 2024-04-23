@@ -4,7 +4,7 @@ import Sparkle from "../SVGs/Icons/sparkle";
 
 const About = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section className={`${styles.aboutSection} section-padding`}>
       <div className={styles.headerWrapper}>
         <h1>Let us bring your creative vision to life.</h1>
       </div>
