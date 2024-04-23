@@ -1,0 +1,26 @@
+@use "../../styles/vars";
+
+.featuredNavSection {
+  .navContainer {
+    margin-top: 10px;
+    a {
+      .featuredNavButton {
+        @include vars.flexbox();
+        @include vars.justify-content(space-between);
+        border-top: 1px solid vars.$red;
+        color: vars.$red;
+        padding: 50px 0;
+        text-transform: uppercase;
+        transition: color 0.3s linear;
+        .iconContainer {
+          width: 58px;
+        }
+      }
+      &:hover {
+        .featuredNavButton {
+          color: vars.$black !important;
+        }
+      }
+    }
+  }
+}
