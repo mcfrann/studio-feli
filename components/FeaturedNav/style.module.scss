@@ -1,0 +1,15 @@
+@use "../../styles/vars";
+
+.featuredNavSection {
+  .navContainer {
+    margin-top: 10px;
+    .featuredNavButton {
+      border-top: 1px solid vars.$red;
+      padding: 50px 0;
+      text-transform: uppercase;
+      a {
+        color: vars.$red;
+      }
+    }
+  }
+}
