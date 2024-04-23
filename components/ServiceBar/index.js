@@ -2,15 +2,18 @@ import styles from "./style.module.scss";
 import Star from "../SVGs/Icons/star";
 import Sparkle from "../SVGs/Icons/sparkle";
 import Burst from "../SVGs/Icons/burst";
+import NormalStar from "../SVGs/Icons/normalStar";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const ServiceBar = () => {
   const services = [
+    { service: "Branding", icon: <NormalStar /> },
     { service: "Visual Design", icon: <Star /> },
     { service: "Web Development", icon: <Sparkle /> },
     { service: "Photography", icon: <Burst /> },
+    { service: "Branding", icon: <NormalStar /> },
     { service: "Visual Design", icon: <Star /> },
     { service: "Web Development", icon: <Sparkle /> },
     { service: "Photography", icon: <Burst /> },
