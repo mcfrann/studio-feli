@@ -1,5 +1,6 @@
 import styles from "./style.module.scss";
 import Link from "next/link";
+import Arrow from "../SVGs/Icons/arrow";
 
 const FeaturedNav = () => {
   const nav = {
@@ -15,11 +16,14 @@ const FeaturedNav = () => {
     return nav.navItems.map((item, i) => {
       const { name, href } = item;
       return (
-        <div className={styles.featuredNavButton} key={`feat-nav-item-${i}`}>
-          <Link href={href}>
+        <Link href={href} key={`feat-nav-item-${i}`}>
+          <div className={styles.featuredNavButton}>
             <h1>{name}</h1>
-          </Link>
-        </div>
+            <div className={styles.iconContainer}>
+              <Arrow />
+            </div>
+          </div>
+        </Link>
       );
     });
   };
