@@ -1,6 +1,7 @@
 import styles from "./style.module.scss";
 import { navItems } from "../../../utils/navItems";
 import Link from "next/link";
+import Sparkle from "../../SVGs/Icons/sparkle";
 
 const Footer = () => {
   const renderNavItems = () => {
@@ -16,16 +17,19 @@ const Footer = () => {
     });
   };
 
-  //test
-
   return (
     <section className={styles.footer}>
       <div className={styles.emailContainer}>
-        <p>Let's Create Something Together</p>
-        <p>studiofeli@gmail.com</p>
+        <p className={styles.copy}>Let's create something together</p>
+        <p className={styles.email}>studiofeli@gmail.com</p>
       </div>
       <div className={styles.footerBar}>
-        <div className={styles.tidbit}>Enjoying sunshine in Mexico.</div>
+        <div className={styles.tidbit}>
+          <div className={styles.iconContainer}>
+            <Sparkle />
+          </div>
+          Enjoying sunshine in Mexico.
+        </div>
         <div className={styles.footerNav}>{renderNavItems()}</div>
         <div className={styles.copyright}>Copyright © studio feli 2024</div>
       </div>
