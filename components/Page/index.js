@@ -5,6 +5,7 @@ import Hero from "../Hero";
 import ServiceBar from "../ServiceBar";
 import About from "../About";
 import ProjectsSection from "../ProjectsSection";
+import FeaturedNav from "../FeaturedNav";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <ServiceBar />
       <ProjectsSection />
       <About />
+      <FeaturedNav />
       <Footer />
     </section>
   );
