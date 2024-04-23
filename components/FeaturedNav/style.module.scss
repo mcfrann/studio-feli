@@ -1,6 +1,9 @@
 @use "../../styles/vars";
 
 .featuredNavSection {
+  span {
+    opacity: 0;
+  }
   .navContainer {
     margin-top: 10px;
     a {
@@ -9,9 +12,11 @@
         @include vars.justify-content(space-between);
         border-top: 1px solid vars.$red;
         color: vars.$red;
+        opacity: 0;
         padding: 50px 0;
         text-transform: uppercase;
         transition: color 0.3s linear;
+        transform: translateX(50%);
         .iconContainer {
           width: 58px;
         }
