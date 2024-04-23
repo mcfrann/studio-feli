@@ -89,6 +89,12 @@ $ten-twelfths: calc(100vw * 10 / 12);
 $eleven-twelfths: calc(100vw * 11 / 12);
 $full: 100%;
 
+@mixin fade-up {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.15s linear;
+}
+
 @mixin grid-wrap {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

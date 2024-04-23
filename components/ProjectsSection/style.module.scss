@@ -1,18 +1,26 @@
 @use "../../styles/vars";
 
 .projectsSection {
+  @include vars.flexbox();
+  @include vars.flex-direction(column);
   .headerWrapper {
     margin-bottom: 30px;
+    overflow: hidden;
     padding-left: vars.$one-twenty-fourth;
+    h1 {
+      @include vars.fade-up();
+    }
   }
   .projectsContainer {
     @include vars.flexbox();
     @include vars.align-items(center);
-    height: 80vh;
+    height: 75vh;
     width: 100vw;
     .projectCard {
       transition: all 0.25s linear;
-      height: 80vh;
+      transform: translateX(100%);
+      opacity: 0;
+      height: 75vh;
       width: 33.33%;
       img {
         object-fit: cover;
@@ -21,9 +29,14 @@
       }
       &:hover {
         cursor: pointer;
-        height: 85vh;
+        height: 78vh;
         width: 36%;
       }
     }
+  }
+  .button {
+    align-self: center;
+    opacity: 0;
+    margin: 45px vars.$one-twenty-fourth 0 0;
   }
 }
