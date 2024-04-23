@@ -1,0 +1,10 @@
+@use "../../../styles/vars";
+
+.arrow {
+  fill: none;
+  height: 100%;
+  path {
+    stroke: vars.$red;
+    stroke-width: 8;
+  }
+}
