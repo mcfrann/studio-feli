@@ -2,7 +2,6 @@
 
 .aboutSection {
   @include vars.grid-wrap;
-  padding: 250px vars.$one-twenty-fourth;
   .headerWrapper {
     grid-row: 1;
     grid-column: 1 / 8;

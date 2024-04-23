@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Hero from "../Hero";
 import ServiceBar from "../ServiceBar";
 import About from "../About";
+import ProjectsSection from "../ProjectsSection";
 
 const Page = () => {
   return (
@@ -11,6 +12,7 @@ const Page = () => {
       <Header />
       <Hero />
       <ServiceBar />
+      <ProjectsSection />
       <About />
       <Footer />
     </section>
