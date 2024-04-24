@@ -7,7 +7,12 @@ const BioSection = () => {
     return bios.map((bio, i) => {
       let alternate = i % 2 === 0 || i === 0;
       return (
-        <BioBlock bio={bio} alternate={alternate} key={`bio-block-${i}`} />
+        <BioBlock
+          bio={bio}
+          alternate={alternate}
+          last={i === bios.length - 1}
+          key={`bio-block-${i}`}
+        />
       );
     });
   };
