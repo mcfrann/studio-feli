@@ -21,10 +21,14 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+span {
   drop-shadow: none !important ;
   &:focus-visible {
     display: none;
+  }
+  &::selection {
+    background: $pink;
   }
 }
 
