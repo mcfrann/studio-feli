@@ -9,7 +9,13 @@
     @include vars.flex-direction(row);
   }
   .textContainer {
+    @include vars.flexbox();
+    @include vars.flex-direction(column);
+    @include vars.justify-content(center);
     width: vars.$six-twelfths;
+    p {
+      width: vars.$four-twelfths;
+    }
   }
   .imageContainer {
     width: vars.$six-twelfths;
