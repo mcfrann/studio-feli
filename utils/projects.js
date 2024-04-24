@@ -1,6 +1,6 @@
-import sia from "../public/images/sia.jpg";
-import luna from "../public/images/Luna.jpg";
-import dromo from "../public/images/restaurant.jpg";
+import sia from "../public/projectImages/sia.jpg";
+import luna from "../public/projectImages/Luna.jpg";
+import dromo from "../public/projectImages/restaurant.jpg";
 
 export const projects = [
   { name: "Spontaneous Sia", image: sia, description: "" },
