@@ -16,7 +16,7 @@ const ServiceBar = ({ text, alternate, red }) => {
         toggleActions: "play none none reverse",
         scrub: 3,
       },
-      x: "-10%",
+      x: !alternate ? "-10%" : "10%",
     });
   }, [barRef, scrollRef]);
 
@@ -25,7 +25,10 @@ const ServiceBar = ({ text, alternate, red }) => {
       className={`${styles.serviceBar} ${red && styles.red}`}
       ref={barRef}
     >
-      <div className={styles.scrollSection} ref={scrollRef}>
+      <div
+        className={`${styles.scrollSection} ${alternate && styles.alternate}`}
+        ref={scrollRef}
+      >
         {text.map((element, i) => {
           const { copy, icon } = element;
           return (
