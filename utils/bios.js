@@ -15,10 +15,4 @@ export const bios = [
     copy: "As a developer and photographer, she blends code and visual storytelling, bringing a dual perspective to create seamless and creative projects.",
     image: ivana,
   },
-  {
-    name: "Sia",
-    title: "CEO",
-    copy: "As a developer and photographer, she blends code and visual storytelling, bringing a dual perspective to create seamless and creative projects.",
-    image: sia,
-  },
 ];
