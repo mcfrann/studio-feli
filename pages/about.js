@@ -1,5 +1,6 @@
 import Page from "../components/Page";
 import Hero from "../components/Hero";
+import BioSection from "../components/BioSection";
 
 export default function About() {
   const text = {
@@ -9,6 +10,7 @@ export default function About() {
   return (
     <Page>
       <Hero text={text} />
+      <BioSection />
     </Page>
   );
 }
