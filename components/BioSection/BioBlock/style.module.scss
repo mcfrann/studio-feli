@@ -1,0 +1,22 @@
+@use "../../../styles/vars";
+
+.bioBlock {
+  @include vars.flexbox();
+  @include vars.flex-direction(row-reverse);
+  border-top: 1px solid vars.$red;
+  min-height: calc(100vh - 92.5px);
+  &.alternate {
+    @include vars.flex-direction(row);
+  }
+  .textContainer {
+    width: vars.$six-twelfths;
+  }
+  .imageContainer {
+    width: vars.$six-twelfths;
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
