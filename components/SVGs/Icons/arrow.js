@@ -2,9 +2,8 @@ import styles from "./arrow.module.scss";
 
 const Arrow = () => {
   return (
-    <svg viewBox="0 0 100 100" className={styles.arrow}>
-      <path d="M34.4482 23.0261L78.7374 21.263L76.9742 65.5521" />
-      <path d="M78.4126 21.5874L21.9824 78.0176" />
+    <svg viewBox="0 0 63 64" className={styles.arrow}>
+      <path d="M48.9378 9.46244H14.9564V0.935547L63 0.999289V49H54L54.5284 15.0464L5.59009 63.9355L0 58.3511L48.9378 9.46244Z" />
     </svg>
   );
 };
