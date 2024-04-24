@@ -130,6 +130,21 @@ $full: 100%;
   }
 }
 
+@mixin body-small() {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-style: $body-font-style;
+  font-size: 20pt;
+  font-size: calc(12pt + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.5;
+  @include mobile {
+    font-size: calc(12pt + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
+  @include x-small {
+    font-size: calc(11pt + (35 - 11) * ((100vw - 300px) / (1600 - 300)));
+  }
+}
+
 @mixin body-semibold() {
   font-family: $body-semibold-font-family;
   font-weight: $body-semibold-font-weight;
