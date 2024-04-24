@@ -2,10 +2,11 @@ import styles from "../styles/Home.module.scss";
 import Page from "../components/Page";
 import Hero from "../components/Hero";
 import ServiceBar from "../components/ServiceBar";
-import About from "../components/About";
+import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
 import FeaturedNav from "../components/FeaturedNav";
 import { servicesBar } from "../utils/barText";
+import { home } from "../utils/aboutText";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         <Hero />
         <ServiceBar text={servicesBar} />
         <ProjectsSection />
-        <About />
+        <AboutSection text={home} />
         <FeaturedNav />
       </Page>
     </section>
