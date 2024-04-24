@@ -8,7 +8,11 @@ const BioBlock = ({ bio, alternate, last }) => {
 
   return (
     <>
-      <div className={`${styles.bioBlock} ${alternate && styles.alternate}`}>
+      <div
+        className={`${styles.bioBlock} ${alternate && styles.alternate} ${
+          last && styles.last
+        }`}
+      >
         <div className={`${styles.textContainer} section-padding`}>
           <p>{title}</p>
           <h2>{name}</h2>
@@ -18,7 +22,7 @@ const BioBlock = ({ bio, alternate, last }) => {
           <ImageRender image={image} />
         </div>
       </div>
-      {!last && <ServiceBar text={aboutBar} alternate={alternate} />}
+      {!last && <ServiceBar text={aboutBar} alternate={alternate} red={true} />}
     </>
   );
 };

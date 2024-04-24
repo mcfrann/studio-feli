@@ -8,6 +8,9 @@
   &.alternate {
     @include vars.flex-direction(row);
   }
+  &.last {
+    border-bottom: 1px solid vars.$red;
+  }
   .textContainer {
     @include vars.flexbox();
     @include vars.flex-direction(column);
