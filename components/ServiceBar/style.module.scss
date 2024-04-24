@@ -9,6 +9,17 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  &.red {
+    background-color: vars.$red;
+    h2 {
+      color: vars.$white !important;
+    }
+    .icon {
+      svg path {
+        fill: vars.$white;
+      }
+    }
+  }
   .scrollSection {
     @include vars.flexbox();
     position: absolute;
@@ -16,6 +27,10 @@
     height: 100%;
     width: max-content;
     transform: translateX(0);
+    &.alternate {
+      left: unset;
+      right: 0;
+    }
     .serviceWrapper {
       @include vars.flexbox();
       @include vars.align-items(center);
