@@ -1,24 +1,9 @@
 import styles from "./style.module.scss";
-import Star from "../SVGs/Icons/star";
-import Sparkle from "../SVGs/Icons/sparkle";
-import Burst from "../SVGs/Icons/burst";
-import NormalStar from "../SVGs/Icons/normalStar";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const ServiceBar = () => {
-  const services = [
-    { service: "Branding", icon: <NormalStar /> },
-    { service: "Visual Design", icon: <Star /> },
-    { service: "Web Development", icon: <Sparkle /> },
-    { service: "Photography", icon: <Burst /> },
-    { service: "Branding", icon: <NormalStar /> },
-    { service: "Visual Design", icon: <Star /> },
-    { service: "Web Development", icon: <Sparkle /> },
-    { service: "Photography", icon: <Burst /> },
-  ];
-
+const ServiceBar = ({ text, alternate, red }) => {
   const barRef = useRef();
   const scrollRef = useRef();
   gsap.registerPlugin(ScrollTrigger);
@@ -36,13 +21,16 @@ const ServiceBar = () => {
   }, [barRef, scrollRef]);
 
   return (
-    <section className={styles.serviceBar} ref={barRef}>
+    <section
+      className={`${styles.serviceBar} ${red && styles.red}`}
+      ref={barRef}
+    >
       <div className={styles.scrollSection} ref={scrollRef}>
-        {services.map((element, i) => {
-          const { service, icon } = element;
+        {text.map((element, i) => {
+          const { copy, icon } = element;
           return (
             <div className={styles.serviceWrapper} key={i}>
-              {service && <h2>{service} </h2>}
+              {copy && <h2>{copy} </h2>}
               {icon && <div className={styles.icon}>{icon}</div>}
             </div>
           );
