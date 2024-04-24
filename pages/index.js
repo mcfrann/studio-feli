@@ -5,13 +5,14 @@ import ServiceBar from "../components/ServiceBar";
 import About from "../components/About";
 import ProjectsSection from "../components/ProjectsSection";
 import FeaturedNav from "../components/FeaturedNav";
+import { servicesBar } from "../utils/barText";
 
 export default function Home() {
   return (
     <section className={styles.homepageContainer}>
       <Page>
         <Hero />
-        <ServiceBar />
+        <ServiceBar text={servicesBar} />
         <ProjectsSection />
         <About />
         <FeaturedNav />
