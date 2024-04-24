@@ -10,6 +10,7 @@
       .featuredNavButton {
         @include vars.flexbox();
         @include vars.justify-content(space-between);
+        @include vars.align-items(center);
         border-top: 1px solid vars.$red;
         color: vars.$red;
         opacity: 0;
@@ -18,12 +19,20 @@
         transition: color 0.3s linear;
         transform: translateX(50%);
         .iconContainer {
-          width: 58px;
+          @include vars.flexbox();
+          @include vars.align-items(center);
+          height: 100%;
+          width: 57px;
         }
       }
       &:hover {
         .featuredNavButton {
-          color: vars.$black !important;
+          color: vars.$black;
+          .iconContainer {
+            svg path {
+              fill: vars.$black;
+            }
+          }
         }
       }
     }

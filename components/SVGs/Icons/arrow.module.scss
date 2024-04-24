@@ -4,7 +4,7 @@
   fill: none;
   height: 100%;
   path {
-    stroke: vars.$red;
-    stroke-width: 8;
+    fill: vars.$red;
+    transition: fill 0.3s linear;
   }
 }
