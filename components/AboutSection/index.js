@@ -27,7 +27,6 @@ const AboutSection = ({ text }) => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 40%",
-        markers: { startColor: "purple" },
       },
     });
     if (headerFinished) {

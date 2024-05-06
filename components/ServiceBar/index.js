@@ -17,7 +17,6 @@ const ServiceBar = ({ text, alternate, red }) => {
         start: "bottom 95%",
         toggleActions: "play none none reverse",
         scrub: 3,
-        markers: { startColor: "blue" },
       },
       x: !alternate ? "-10%" : "10%",
     });
