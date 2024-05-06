@@ -9,12 +9,15 @@ const ServiceBar = ({ text, alternate, red }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    ScrollTrigger.refresh();
+
     gsap.to(scrollRef.current, {
       scrollTrigger: {
         trigger: barRef.current,
         start: "bottom 95%",
         toggleActions: "play none none reverse",
         scrub: 3,
+        markers: { startColor: "blue" },
       },
       x: !alternate ? "-10%" : "10%",
     });

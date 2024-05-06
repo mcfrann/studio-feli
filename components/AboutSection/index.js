@@ -17,6 +17,8 @@ const AboutSection = ({ text }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    ScrollTrigger.refresh();
+
     gsap.to(titleRef.current, {
       opacity: 1,
       duration: 0.5,
@@ -25,6 +27,7 @@ const AboutSection = ({ text }) => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 40%",
+        markers: { startColor: "purple" },
       },
     });
     if (headerFinished) {
