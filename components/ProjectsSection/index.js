@@ -23,6 +23,8 @@ const ProjectsSection = () => {
   };
 
   useEffect(() => {
+    ScrollTrigger.refresh();
+
     gsap.to(titleRef.current, {
       opacity: 1,
       duration: 0.5,
