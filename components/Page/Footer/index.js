@@ -24,7 +24,11 @@ const Footer = () => {
     <section className={styles.footer}>
       <div className={styles.emailContainer}>
         <p className={styles.copy}>Let's create something together</p>
-        <p className={styles.email}>studiofeli@gmail.com</p>
+        <div className={`primary-link inverse`}>
+          <a href={`mailto:studiofeli@gmail.com`} className={`big ${styles.email}`}>
+            studiofeli@gmail.com
+          </a>
+        </div>
       </div>
       <div className={styles.footerBar}>
         <div className={styles.tidbit}>
