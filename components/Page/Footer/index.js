@@ -8,7 +8,10 @@ const Footer = () => {
     return navItems.map((item, i) => {
       const { nav, href } = item;
       return (
-        <div className={styles.navButton} key={`nav-item-${i}`}>
+        <div
+          className={`primary-link inverse ${styles.navButton}`}
+          key={`nav-item-${i}`}
+        >
           <Link href={href}>
             <span>{nav}</span>
           </Link>
