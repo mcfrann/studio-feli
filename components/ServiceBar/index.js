@@ -15,6 +15,7 @@ const ServiceBar = ({ text, alternate, red }) => {
       scrollTrigger: {
         trigger: barRef.current,
         start: "bottom 95%",
+        end: "bottom top",
         toggleActions: "play none none reverse",
         scrub: 3,
       },
