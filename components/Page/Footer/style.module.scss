@@ -57,18 +57,13 @@
         a {
           color: vars.$white;
           height: 100%;
-          padding: 8px 20px;
+          margin: 8px 20px;
           text-transform: uppercase;
           text-align: center;
           transition: color 0.15s linear;
           width: 100%;
           span {
             font-size: 12pt !important;
-          }
-        }
-        &:hover {
-          a {
-            color: vars.$black;
           }
         }
       }
