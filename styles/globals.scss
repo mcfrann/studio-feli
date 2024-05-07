@@ -51,6 +51,15 @@ a {
       background-color: $white;
     }
   }
+
+  .big {
+    padding-bottom: 8px;
+  }
+
+  .big::before {
+    border-radius: 5px;
+    height: 5px;
+  }
 }
 
 h1,
