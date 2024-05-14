@@ -19,30 +19,38 @@ const AboutSection = ({ text }) => {
   useEffect(() => {
     ScrollTrigger.refresh();
 
-    gsap.to(titleRef.current, {
-      opacity: 1,
-      duration: 0.5,
-      y: 0,
-      onComplete: () => setHeaderFinished(true),
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 40%",
-      },
-    });
+    if (titleRef && titleRef.current) {
+      gsap.to(titleRef.current, {
+        opacity: 1,
+        duration: 0.5,
+        y: 0,
+        onComplete: () => setHeaderFinished(true),
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 40%",
+        },
+      });
+    }
     if (headerFinished) {
-      gsap.to(copyRef.current, {
-        opacity: 1,
-        x: 0,
-      });
-      gsap.to(buttonRef.current, {
-        delay: 1,
-        opacity: 1,
-      });
-      gsap.to(iconRef.current, {
-        delay: 1.25,
-        opacity: 1,
-        x: 0,
-      });
+      if (copyRef && copyRef.current) {
+        gsap.to(copyRef.current, {
+          opacity: 1,
+          x: 0,
+        });
+      }
+      if (buttonRef && buttonRef.current) {
+        gsap.to(buttonRef.current, {
+          delay: 1,
+          opacity: 1,
+        });
+      }
+      if (iconRef && iconRef.current) {
+        gsap.to(iconRef.current, {
+          delay: 1.25,
+          opacity: 1,
+          x: 0,
+        });
+      }
     }
   }, [titleRef, sectionRef, copyRef, headerFinished, buttonRef, iconRef]);
 
