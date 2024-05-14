@@ -21,7 +21,7 @@ const ServiceBar = ({ text, alternate, red }) => {
       },
       x: !alternate ? "-10%" : "10%",
     });
-  }, [barRef, scrollRef]);
+  }, [barRef, scrollRef, alternate]);
 
   return (
     <section
