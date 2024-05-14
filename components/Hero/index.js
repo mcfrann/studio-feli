@@ -37,7 +37,7 @@ const Hero = ({ text, setHeroLoaded }) => {
         {
           y: 0,
           opacity: 1,
-          stagger: 0.1,
+          stagger: 0.08,
         },
         0
       ).to(
@@ -46,7 +46,7 @@ const Hero = ({ text, setHeroLoaded }) => {
           opacity: 1,
           onComplete: () => setHeroLoaded(true),
         },
-        1.5
+        ">"
       );
     }
   }, [headlineRef, copyRef, text]);
