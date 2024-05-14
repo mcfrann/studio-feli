@@ -17,8 +17,8 @@ export default function About() {
   }, []);
 
   const text = {
-    headline: "Who We Are",
-    copy: "As a dynamic woman duo with a shared passion for design and collaboration, we thrive in the intersection of creativity and technology.",
+    headline: "Happy People Make Happy Work",
+    copy: "As a freelance pair with a passion for creativity, we created Feli to nurture our own inventive spark and assist brands in their growth journey, one project at a time.",
   };
 
   return (
