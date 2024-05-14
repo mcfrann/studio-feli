@@ -8,7 +8,10 @@ const Footer = () => {
     return navItems.map((item, i) => {
       const { nav, href } = item;
       return (
-        <div className={styles.navButton} key={`nav-item-${i}`}>
+        <div
+          className={`primary-link inverse ${styles.navButton}`}
+          key={`nav-item-${i}`}
+        >
           <Link href={href}>
             <span>{nav}</span>
           </Link>
@@ -20,8 +23,15 @@ const Footer = () => {
   return (
     <section className={styles.footer}>
       <div className={styles.emailContainer}>
-        <p className={styles.copy}>Let's create something together</p>
-        <p className={styles.email}>studiofeli@gmail.com</p>
+        <p className={styles.copy}>Let's create something together.</p>
+        <div className={`primary-link inverse`}>
+          <a
+            href={`mailto:studiofeli@gmail.com`}
+            className={`big ${styles.email}`}
+          >
+            studiofeli@gmail.com
+          </a>
+        </div>
       </div>
       <div className={styles.footerBar}>
         <div className={styles.tidbit}>

@@ -13,7 +13,53 @@ body {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
+}
+
+.primary-link {
+  a {
+    color: $red;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $red;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  &.inverse {
+    a {
+      color: $white;
+    }
+
+    a::before {
+      background-color: $white;
+    }
+  }
+
+  .big {
+    padding-bottom: 8px;
+  }
+
+  .big::before {
+    border-radius: 5px;
+    height: 5px;
+  }
 }
 
 h1,
@@ -73,25 +119,30 @@ span {
 .button {
   background-color: $red;
   border-radius: 30px;
+  border: 1px solid $red;
   line-height: 1;
-  padding: 8px 20px;
+  overflow: hidden;
+  transition: background-color 0.3s linear;
   width: max-content;
   a {
     @include flexbox();
     @include justify-content(center);
     color: $white;
     height: 100%;
+    padding: 8px 20px;
     text-align: center;
     text-transform: uppercase;
-    transition: color 0.15s linear;
+    transition: color 0.3s linear;
     width: 100%;
     span {
       font-size: 12pt !important;
     }
   }
   &:hover {
+    background-color: $white;
+    cursor: pointer;
     a {
-      color: $black;
+      color: $red;
     }
   }
 }

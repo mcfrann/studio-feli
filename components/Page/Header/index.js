@@ -44,7 +44,11 @@ const Header = ({ homepage, firstLoad, setFirstLoad }) => {
     return navItems.map((item, i) => {
       const { nav, href } = item;
       return (
-        <div className={styles.navButton} key={`nav-item-${i}`} ref={addToRefs}>
+        <div
+          className={`primary-link ${styles.navButton}`}
+          key={`nav-item-${i}`}
+          ref={addToRefs}
+        >
           <Link href={href}>{small ? <span>{nav}</span> : <h2>{nav}</h2>}</Link>
         </div>
       );

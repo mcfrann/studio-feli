@@ -1,31 +1,49 @@
 @use "../../../styles/vars";
 
-.bioBlock {
+.bioBlockWrapper {
   @include vars.flexbox();
-  @include vars.flex-direction(row-reverse);
-  border-top: 1px solid vars.$red;
-  min-height: calc(100vh - 92.5px);
-  &.alternate {
-    @include vars.flex-direction(row);
+  @include vars.flex-direction(column);
+  .borderTop {
+    background-color: vars.$red;
+    height: 1px;
+    width: 0vw;
   }
-  &.last {
-    border-bottom: 1px solid vars.$red;
-  }
-  .textContainer {
+  .bioBlock {
     @include vars.flexbox();
-    @include vars.flex-direction(column);
-    @include vars.justify-content(center);
-    width: vars.$six-twelfths;
-    p {
-      width: vars.$four-twelfths;
+    @include vars.flex-direction(row-reverse);
+    min-height: calc(100vh - 92.5px);
+    &.last {
+      border-bottom: 1px solid vars.$red;
     }
-  }
-  .imageContainer {
-    width: vars.$six-twelfths;
-    img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+    .textContainer {
+      @include vars.flexbox();
+      @include vars.flex-direction(column);
+      @include vars.justify-content(center);
+      transform: translateX(100%);
+      opacity: 0;
+      width: vars.$six-twelfths;
+      p {
+        width: vars.$four-twelfths;
+      }
+    }
+    .imageContainer {
+      transform: translateX(-100%);
+      opacity: 0;
+      width: vars.$six-twelfths;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    &.alternate {
+      @include vars.flex-direction(row);
+      .imageContainer {
+        transform: translateX(100%);
+      }
+      .textContainer {
+        transform: translateX(-100%);
+      }
     }
   }
 }

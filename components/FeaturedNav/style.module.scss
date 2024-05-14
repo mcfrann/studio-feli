@@ -16,22 +16,22 @@
         opacity: 0;
         padding: 50px 0;
         text-transform: uppercase;
-        transition: color 0.3s linear;
         transform: translateX(50%);
+        transition: all 0.3s linear;
         .iconContainer {
           @include vars.flexbox();
           @include vars.align-items(center);
           height: 100%;
+          transform: rotate(0deg);
+          transition: transform 0.3s linear;
           width: 57px;
         }
       }
       &:hover {
         .featuredNavButton {
-          color: vars.$black;
+          padding: 50px 13px 50px 15px;
           .iconContainer {
-            svg path {
-              fill: vars.$black;
-            }
+            transform: rotate(45deg);
           }
         }
       }

@@ -7,11 +7,22 @@ import ProjectsSection from "../components/ProjectsSection";
 import FeaturedNav from "../components/FeaturedNav";
 import { servicesBar } from "../utils/barText";
 import { home } from "../utils/aboutText";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Home() {
+  const [heroLoaded, setHeroLoaded] = useState(true);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, []);
+
   return (
     <section className={styles.homepageContainer}>
-      <Page>
+      <Page heroLoaded={heroLoaded}>
         <Hero />
         <ServiceBar text={servicesBar} />
         <ProjectsSection />

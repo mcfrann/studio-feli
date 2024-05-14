@@ -2,12 +2,12 @@ import styles from "./style.module.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Page = ({ children }) => {
+const Page = ({ children, heroLoaded }) => {
   return (
     <section className={styles.page}>
       <Header />
       {children}
-      <Footer />
+      {heroLoaded && <Footer />}
     </section>
   );
 };
