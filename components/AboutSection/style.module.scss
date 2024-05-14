@@ -13,10 +13,9 @@
   .copyButtonContainer {
     grid-row: 2;
     grid-column: 5/13;
-    .copy {
+    .copyBlock {
       opacity: 0;
       transform: translateX(20%);
-      transition: all 0.25s linear;
     }
     .button {
       margin-top: 45px;
