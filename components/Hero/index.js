@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Hero = ({ text, setHeroLoaded }) => {
-  const headlineArray = text.headline.split("");
   const headlineRef = useRef();
   headlineRef.current = [];
   const copyRef = useRef();
@@ -16,6 +15,7 @@ const Hero = ({ text, setHeroLoaded }) => {
   };
 
   const renderHeadline = () => {
+    const headlineArray = text.headline.split("");
     return headlineArray.map((letter, i) => {
       return (
         <h1
@@ -30,24 +30,26 @@ const Hero = ({ text, setHeroLoaded }) => {
   };
 
   useEffect(() => {
-    var tl = gsap.timeline();
-    tl.to(
-      headlineRef.current,
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-      },
-      0
-    ).to(
-      copyRef.current,
-      {
-        opacity: 1,
-        onComplete: () => setHeroLoaded(true),
-      },
-      1.5
-    );
-  }, [headlineRef, copyRef]);
+    if (text && text.copy && text.headline) {
+      var tl = gsap.timeline();
+      tl.to(
+        headlineRef.current,
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+        },
+        0
+      ).to(
+        copyRef.current,
+        {
+          opacity: 1,
+          onComplete: () => setHeroLoaded(true),
+        },
+        1.5
+      );
+    }
+  }, [headlineRef, copyRef, text]);
 
   return (
     <section className={styles.hero}>
