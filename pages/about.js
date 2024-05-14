@@ -3,11 +3,13 @@ import Hero from "../components/Hero";
 import BioSection from "../components/BioSection";
 import AboutSection from "../components/AboutSection";
 import { about } from "../utils/aboutText";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function About() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -20,10 +22,14 @@ export default function About() {
   };
 
   return (
-    <Page>
-      <Hero text={text} />
-      <BioSection />
-      <AboutSection text={about} />
+    <Page heroLoaded={heroLoaded}>
+      <Hero text={text} setHeroLoaded={setHeroLoaded} />
+      {heroLoaded && (
+        <>
+          <BioSection />
+          <AboutSection text={about} />
+        </>
+      )}
     </Page>
   );
 }
