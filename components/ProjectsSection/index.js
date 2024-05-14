@@ -59,7 +59,11 @@ const ProjectsSection = () => {
     return projects.map((project, i) => {
       const { name, image, description } = project;
       return (
-        <div className={styles.projectCard} ref={addToRefs}>
+        <div
+          className={styles.projectCard}
+          ref={addToRefs}
+          key={`project-card-${i}`}
+        >
           <ImageRender image={image} />
         </div>
       );
