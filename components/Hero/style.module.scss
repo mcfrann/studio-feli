@@ -16,9 +16,12 @@
       width: vars.$seven-twelfths;
       .headlineContainer {
         @include vars.flexbox();
+        @include vars.justify-content(center);
+        @include vars.flex-wrap(wrap);
         overflow: hidden;
+        width: vars.$six-twelfths;
         .letter {
-          transform: translateY(100%);
+          transform: translateY(60%);
           opacity: 0;
           &.space {
             width: 20px;
